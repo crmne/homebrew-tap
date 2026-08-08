@@ -12,7 +12,10 @@ cask "stompchain-app" do
   caveats <<~EOS
     Quit HX Edit before connecting; only one editor can hold the device.
 
-    If macOS refuses to open the app, right-click it and choose Open once;
-    this disappears when notarized builds ship.
+    If macOS refuses to open the app, open it once through System Settings,
+    Privacy & Security: double-click the app, click Done, then scroll to the
+    Security section and click "Open Anyway" next to the stompchain message.
+    Recent macOS no longer allows the old right-click bypass. This disappears
+    when notarized builds ship.
   EOS
 end

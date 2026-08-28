@@ -7,6 +7,7 @@ Homebrew formulae for [my projects](https://github.com/crmne).
 ```bash
 brew install crmne/tap/mqtt-alive-daemon
 
+brew install --cask crmne/tap/fastpotify       # Fastpotify, the Spotify client
 brew install --cask crmne/tap/stompchain-app   # stompchain, the app
 brew install crmne/tap/stompchain              # stompchain, the CLI
 ```

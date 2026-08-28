@@ -21,8 +21,8 @@ cask "fastpotify" do
 
   caveats <<~EOS
     This build is not notarized yet, so macOS blocks the first launch.
-    Either install without the quarantine flag:
-      brew install --cask --no-quarantine crmne/tap/fastpotify
+    Either clear the quarantine flag:
+      xattr -d com.apple.quarantine /Applications/Fastpotify.app
     or open it once through System Settings, Privacy & Security: double-click
     the app, click Done, then scroll to the Security section and click
     "Open Anyway" next to the Fastpotify message. macOS remembers the choice.

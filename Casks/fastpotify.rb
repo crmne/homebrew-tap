@@ -1,6 +1,6 @@
 cask "fastpotify" do
-  version "0.3.0"
-  sha256 "795ecbd91b107021583b91ac526bf1c79ff08ed615dd750851642cf9192ed367"
+  version "0.4.0"
+  sha256 "13c9182431ce5d64fe05e8944f7ebdedda17afdbd7b1d17b0d45b3b365195ae1"
 
   url "https://github.com/crmne/fastpotify/releases/download/v#{version}/fastpotify-v#{version}-macos-universal.dmg"
   name "Fastpotify"

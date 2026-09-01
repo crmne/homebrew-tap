@@ -22,7 +22,7 @@ cask "fastpotify" do
   caveats <<~EOS
     This build is not notarized yet, so macOS blocks the first launch.
     Either clear the quarantine flag:
-      xattr -dr com.apple.quarantine /Applications/Fastpotify.app
+      find /Applications/Fastpotify.app -exec xattr -d com.apple.quarantine {} \; 2>/dev/null
     or open it once through System Settings, Privacy & Security: double-click
     the app, click Done, then scroll to the Security section and click
     "Open Anyway" next to the Fastpotify message. macOS remembers the choice.

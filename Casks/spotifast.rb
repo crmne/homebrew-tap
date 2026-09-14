@@ -1,8 +1,8 @@
-cask "fastpotify" do
+cask "spotifast" do
   version "0.8.0"
   sha256 "c249475195eab33823467b0c44fcb69d801c75dbeaddcc83e85a47bd886f7fc8"
 
-  url "https://github.com/crmne/spotifast/releases/download/v#{version}/fastpotify-v#{version}-macos-universal.dmg"
+  url "https://github.com/crmne/spotifast/releases/download/v#{version}/spotifast-v#{version}-macos-universal.dmg"
   name "Spotifast"
   desc "Native Spotify client"
   homepage "https://spotifast.rocks"

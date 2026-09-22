@@ -1,6 +1,6 @@
 cask "spotifast" do
-  version "0.9.0"
-  sha256 "6313f6cb248f0683b1036a5ec0f79548c12903cbcd83a011170af1834f7894d1"
+  version "0.9.1"
+  sha256 "277e18c12a0b8b58d4989e20dcc7322539dfef3f6364c59e1a6b0421edf898aa"
 
   url "https://github.com/crmne/spotifast/releases/download/v#{version}/spotifast-v#{version}-macos-universal.dmg"
   name "Spotifast"
@@ -17,6 +17,8 @@ cask "spotifast" do
   app bundle_name
 
   zap trash: [
+    "~/Library/Application Support/me.paolino.spotifast",
+    "~/Library/Caches/me.paolino.spotifast",
     "~/Library/Application Support/me.paolino.fastpotify",
     "~/Library/Caches/me.paolino.fastpotify",
   ]

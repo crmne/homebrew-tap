@@ -9,8 +9,8 @@ brew install crmne/tap/mqtt-alive-daemon
 
 brew install --cask crmne/tap/spotifast       # Spotifast, the Spotify client
 brew install --cask crmne/tap/zapfast         # ZapFast, the WhatsApp client
-brew install --cask crmne/tap/stompchain-app   # stompchain, the app
-brew install crmne/tap/stompchain              # stompchain, the CLI
+brew install --cask crmne/tap/tonepush        # TonePush, the HX pedal editor
+brew install crmne/tap/tonepush               # TonePush, the CLI
 ```
 
 Formulae are updated by each project's release process.

@@ -1,6 +1,6 @@
 cask "zapfast" do
-  version "0.15.0"
-  sha256 "c528ad216760d3834bf6fb6ddcce23ddd4e86f9227cd98e0dc3762e677307fdf"
+  version "0.16.0"
+  sha256 "bc51cf03cd34b4f72d2efdd5529dc2954ea73fb0fcb452ed26c6be5ae2147425"
 
   url "https://github.com/crmne/zapfast/releases/download/v#{version}/zapfast-v#{version}-macos-universal.dmg"
   name "ZapFast"

@@ -1,6 +1,6 @@
 cask "spotifast" do
-  version "0.10.2"
-  sha256 "55e3a4a208c21593d24b2b76d8ebba48b5e9f7f618c38b2c56e33c40638840d8"
+  version "0.11.0"
+  sha256 "a1b665286f41b1ac13cb6d13d16d277b978a4028d204c96327ac6cf5fc63c009"
 
   url "https://github.com/crmne/spotifast/releases/download/v#{version}/spotifast-v#{version}-macos-universal.dmg"
   name "Spotifast"

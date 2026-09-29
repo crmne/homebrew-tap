@@ -1,8 +1,8 @@
 class Tonepush < Formula
   desc "Editor and tone library for Line 6 HX pedals and the StompStation PRO"
   homepage "https://tonepush.rocks"
-  url "https://github.com/crmne/tonepush/releases/download/v0.6.1/tonepush-v0.6.1-macos-universal.tar.gz"
-  sha256 "888b51dea0a86aeba9a5d8e6ecca860df165388b2208c4a183fbbc31d9ecae81"
+  url "https://github.com/crmne/tonepush/releases/download/v0.7.0/tonepush-v0.7.0-macos-universal.tar.gz"
+  sha256 "848443cec947e269e219000b099b73a1e5eb84feaa25db7d4f416fda8873111f"
   license "MIT"
 
   livecheck do

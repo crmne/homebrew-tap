@@ -1,23 +1,23 @@
 class Cww < Formula
   desc "Chat with Work Local Agent: share folders with Chat with Work, read-only"
   homepage "https://github.com/crmne/chatwithwork-local-agent"
-  version "0.1.0"
+  version "0.2.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     # One universal binary, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.1.0/cww-v0.1.0-macos-universal.tar.gz"
-    sha256 "6f99a0183784d43cb539ba86bd9f378469cdb29ce9d39a826e0a4751e92e25e4"
+    url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.2.0/cww-v0.2.0-macos-universal.tar.gz"
+    sha256 "9d16a701fb6d257d01067abddc3ff4e0b9ac06240f2185f81e6317d9d81f4ca8"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.1.0/cww-v0.1.0-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "bd1aee9dc6c9a927ca6c8598ded4c8448c313c4c86ce45ca243a83935baaf1a8"
+      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.2.0/cww-v0.2.0-x86_64-unknown-linux-musl.tar.gz"
+      sha256 "b226311a10f7368019011ae0d666d04e3f1abe5e94940b73d84c727da1fe07c1"
     end
     on_arm do
-      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.1.0/cww-v0.1.0-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "4fb3258e3ffd86a91aff1f024cfc7d5d3592348fe5a2b15889a27f6d98991d0f"
+      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.2.0/cww-v0.2.0-aarch64-unknown-linux-musl.tar.gz"
+      sha256 "cb9155d6bc6b6302fd8f4ff76954d128ab6ff024ac1ca6cd5be45b43d018ab64"
     end
   end
 

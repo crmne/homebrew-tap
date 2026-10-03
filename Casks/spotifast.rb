@@ -1,6 +1,6 @@
 cask "spotifast" do
-  version "0.11.2"
-  sha256 "dddc87349adf41371120b27243c1b619a164a45902606745ab86bce581df745d"
+  version "0.12.0"
+  sha256 "805704658ce48c7109b6914d1dd1a503fbd4c354f983096559dd45b8654daab6"
 
   url "https://github.com/crmne/spotifast/releases/download/v#{version}/spotifast-v#{version}-macos-universal.dmg"
   name "Spotifast"
@@ -12,23 +12,10 @@ cask "spotifast" do
     strategy :github_latest
   end
 
-  # Historical releases and the pinned packaging fixture still use the old name.
-  bundle_name = ::Version.new(version) <= ::Version.new("0.7.1") ? "Fastpotify.app" : "Spotifast.app"
-  app bundle_name
+  app "Spotifast.app"
 
   zap trash: [
     "~/Library/Application Support/me.paolino.spotifast",
     "~/Library/Caches/me.paolino.spotifast",
-    "~/Library/Application Support/me.paolino.fastpotify",
-    "~/Library/Caches/me.paolino.fastpotify",
   ]
-
-  caveats <<~EOS if ::Version.new(version) <= ::Version.new("0.7.1")
-    This build is not notarized yet, so macOS blocks the first launch.
-    Either clear the quarantine flag:
-      find /Applications/#{bundle_name} -exec xattr -d com.apple.quarantine {} \; 2>/dev/null
-    or open it once through System Settings, Privacy & Security: double-click
-    the app, click Done, then scroll to the Security section and click
-    "Open Anyway" next to the #{bundle_name.delete_suffix(".app")} message. macOS remembers the choice.
-  EOS
 end

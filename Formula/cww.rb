@@ -1,13 +1,13 @@
 class Cww < Formula
   desc "Chat with Work desktop app, terminal interface and background agent"
   homepage "https://github.com/crmne/chatwithwork-local-agent"
-  version "0.3.0"
+  version "0.3.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     # Universal CLI and app bundle, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.0/cww-v0.3.0-macos-universal.tar.gz"
-    sha256 "6c048b06d57fd096b376bf0b65b293c5b178687165c9166a5cb07a85e185fae3"
+    url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.1/cww-v0.3.1-macos-universal.tar.gz"
+    sha256 "c66316f7201b535bfb6ecfb211e586caaeb7fad84f4fff1ec98adcb2c659cbd5"
   end
 
   on_linux do
@@ -19,12 +19,12 @@ class Cww < Formula
     depends_on "libxkbcommon"
     depends_on "wayland"
     on_intel do
-      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.0/cww-app-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1d96dcd5da91e4badbf849a0da8a034e3d907f6bdb123a20e9f818e5d1a650d3"
+      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.1/cww-app-v0.3.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9aeaaf01c23a1f7443df353e3bf34a40b69f6f1b0cc275e9038924cc53e38813"
     end
     on_arm do
-      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.0/cww-app-v0.3.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "9408bee5b5b49de83b5693b15079d04d2bf49279ec10595539e3f69c55257fbb"
+      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.1/cww-app-v0.3.1-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "7090938f18e7312566d1fdb90f95e31d8a7692aaeae6e713e667766fa0369279"
     end
   end
 

@@ -1,6 +1,6 @@
 cask "chat-with-work" do
-  version "0.2.0"
-  sha256 "17c777d1375fcf3fd1e034a195f1c70a2597014183d16e942768cc911616b919"
+  version "0.3.0"
+  sha256 "37e01bae7fa0476953f4b2123fd7c8efed48af41ed316f2e7aa4475255425632"
 
   url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v#{version}/chat-with-work-v#{version}-macos-universal.dmg"
   name "Chat with Work"
@@ -12,6 +12,8 @@ cask "chat-with-work" do
     strategy :github_latest
   end
 
+  # The formula exposes cww on PATH without conflicting with existing installs.
+  depends_on formula: "crmne/tap/cww"
   depends_on macos: ">= :big_sur"
 
   app "Chat with Work.app"
@@ -19,8 +21,10 @@ cask "chat-with-work" do
   zap trash: "~/Library/LaunchAgents/com.chatwithwork.cww-app.plist"
 
   caveats <<~EOS
-    The cww command comes inside the app, and starting the agent from the
-    app registers that copy. To stop the agent before removing the app:
+    Open Chat with Work in Applications, or run cww for the terminal interface.
+    Choose Start Local Agent in the app, or start it now and at login with:
+      cww daemon install
+    Check it with cww status. To stop the agent before removing the app:
       "#{appdir}/Chat with Work.app/Contents/MacOS/cww" daemon uninstall
   EOS
 end

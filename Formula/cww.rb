@@ -1,12 +1,12 @@
 class Cww < Formula
-  desc "Chat with Work desktop app, terminal interface and background agent"
-  homepage "https://github.com/crmne/chatwithwork-local-agent"
+  desc "Chat with Work Desktop app, terminal interface and background agent"
+  homepage "https://github.com/crmne/chatwithwork-desktop"
   version "0.3.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     # Universal CLI and app bundle, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.1/cww-v0.3.1-macos-universal.tar.gz"
+    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.3.1/cww-v0.3.1-macos-universal.tar.gz"
     sha256 "c66316f7201b535bfb6ecfb211e586caaeb7fad84f4fff1ec98adcb2c659cbd5"
   end
 
@@ -19,11 +19,11 @@ class Cww < Formula
     depends_on "libxkbcommon"
     depends_on "wayland"
     on_intel do
-      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.1/cww-app-v0.3.1-x86_64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.3.1/cww-app-v0.3.1-x86_64-unknown-linux-gnu.tar.gz"
       sha256 "9aeaaf01c23a1f7443df353e3bf34a40b69f6f1b0cc275e9038924cc53e38813"
     end
     on_arm do
-      url "https://github.com/crmne/chatwithwork-local-agent/releases/download/v0.3.1/cww-app-v0.3.1-aarch64-unknown-linux-gnu.tar.gz"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.3.1/cww-app-v0.3.1-aarch64-unknown-linux-gnu.tar.gz"
       sha256 "7090938f18e7312566d1fdb90f95e31d8a7692aaeae6e713e667766fa0369279"
     end
   end
@@ -58,7 +58,7 @@ class Cww < Formula
   def caveats
     <<~EOS
       Open the desktop app with cww-app, or run cww for the terminal interface.
-      Choose Start Local Agent in the app, or start it now and at login with:
+      Start the background agent from the app, or start it now and at login with:
         cww daemon install
       Check it with cww status. Nothing is shared until you pair and choose a folder.
 

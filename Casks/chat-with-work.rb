@@ -1,6 +1,6 @@
 cask "chat-with-work" do
-  version "0.3.1"
-  sha256 "4df7e94aee2b48dca57d22680e44706a6726701c58c297ee61e576bb4f4592ba"
+  version "0.4.0"
+  sha256 "fa0ae7a1edc3dfe07bb412117df470ae1bc5361231e5d1cb035bfffb509b6efc"
 
   url "https://github.com/crmne/chatwithwork-desktop/releases/download/v#{version}/chat-with-work-v#{version}-macos-universal.dmg"
   name "Chat with Work Desktop"

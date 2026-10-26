@@ -1,6 +1,6 @@
 cask "tonepush" do
-  version "0.9.1"
-  sha256 "4a382c1183a4ab3a09ab372559c8974dbfe86766a504b3de7edac82d230e0373"
+  version "0.10.0"
+  sha256 "9e5cd31193ad363afd46a5899a73eed2c42f18547946a2b42bbe7ff233398901"
 
   url "https://github.com/crmne/tonepush/releases/download/v#{version}/tonepush-v#{version}-macos-universal.dmg"
   name "TonePush"

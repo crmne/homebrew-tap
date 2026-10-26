@@ -6,8 +6,8 @@ class Cww < Formula
 
   on_macos do
     # Universal CLI and app bundle, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.6.0/cww-v0.6.0-macos-universal.tar.gz"
-    sha256 "41d07fd2e9bfed081b8eacc037dd6bbe3e385177adf5cd06873811faecc4ff81"
+    url "https://github.com/crmne/chatwithwork-desktop/archive/refs/tags/v0.6.1.tar.gz"
+    sha256 "dd9def0c5253ba768ce0a287fa54e6cd78c2efa0cf58380b598b61ca9005ba3f"
   end
 
   on_linux do

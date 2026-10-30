@@ -1,13 +1,13 @@
 class Cww < Formula
   desc "Chat with Work Desktop app, terminal interface and background agent"
   homepage "https://github.com/crmne/chatwithwork-desktop"
-  version "0.9.1"
+  version "0.9.2"
   license any_of: ["MIT", "Apache-2.0"]
 
   on_macos do
     # Universal CLI and app bundle, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.9.1/cww-v0.9.1-macos-universal.tar.gz"
-    sha256 "802b9316008eb2045342736cac7914a34e6e1249be3e8f1c30da5f9d0fa7d2cc"
+    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.9.2/cww-v0.9.2-macos-universal.tar.gz"
+    sha256 "d9576661ca598617645080c73f42365c09aa4880ba31338c5d9ebba3fc7ee38c"
   end
 
   on_linux do
@@ -17,12 +17,12 @@ class Cww < Formula
     # The window is a WebKitGTK 4.1 web view, which Homebrew doesn't carry:
     # the app uses the distribution's (see caveats).
     on_intel do
-      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.9.1/cww-app-v0.9.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4a9afc7d9e092fe724f4feb11c8f840d80cdf25e160ba68b288875d68efe0c9b"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.9.2/cww-app-v0.9.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "791ace01ec7010ba21ab73c717e4112edad57021bbb33da955ef4f64c2aeee50"
     end
     on_arm do
-      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.9.1/cww-app-v0.9.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e56e1b23a010f1e95d6082d885bbd8d631713d2100e2987e59b93ab8bfdbfc5c"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.9.2/cww-app-v0.9.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "fced82d4ded90cf438600122acb26c715815e1bb2436f2abd5cc5d76e4a2541c"
     end
   end
 
@@ -40,6 +40,7 @@ class Cww < Formula
       bin.install_symlink prefix/"Chat with Work.app/Contents/MacOS/cww-app"
     else
       bin.install "cww"
+      (libexec/"chatwithwork").install "browser-engine"
       libexec.install "cww-app"
       # cww-app finds cww beside itself.
       libexec.install_symlink bin/"cww"
@@ -68,7 +69,9 @@ class Cww < Formula
       Without a user service manager, run cww daemon run in a terminal.
       On Linux, the app's window needs your distribution's WebKitGTK 4.1, GTK 3
       and AppIndicator libraries (libwebkit2gtk-4.1-0 and
-      libayatana-appindicator3-1 on Debian and Ubuntu).
+      libayatana-appindicator3-1 on Debian and Ubuntu). Commands also need
+      bubblewrap, slirp4netns, util-linux and nft-backed iptables from your
+      distribution, available on the background service's PATH.
     EOS
   end
 

@@ -1,13 +1,13 @@
 class Cww < Formula
   desc "Chat with Work Desktop app, terminal interface and background agent"
   homepage "https://github.com/crmne/chatwithwork-desktop"
-  version "0.10.1"
+  version "0.11.0"
   license "GPL-3.0-only"
 
   on_macos do
     # Universal CLI and app bundle, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.10.1/cww-v0.10.1-macos-universal.tar.gz"
-    sha256 "22e21aad5d43c41b3c46437947ca57340809afafceea477c81acd58375c5691d"
+    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.11.0/cww-v0.11.0-macos-universal.tar.gz"
+    sha256 "cc11a91f2c750665624e668c1876f2afbd7efe418e14d26f490d27f2d19272a2"
   end
 
   on_linux do
@@ -17,12 +17,12 @@ class Cww < Formula
     # The window is a WebKitGTK 4.1 web view, which Homebrew doesn't carry:
     # the app uses the distribution's (see caveats).
     on_intel do
-      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.10.1/cww-app-v0.10.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "44b2330aa3ba977b78c9d992ee824a75cda10848e0375435b803b52deb6e1517"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.11.0/cww-app-v0.11.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "dbf0d958866d9e443eb94a58b66acb19f0edef3060e26fc1ff024b9b318eac99"
     end
     on_arm do
-      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.10.1/cww-app-v0.10.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "39b319bcc12e1f894a225d7f5cf162e85e2c68f8af4c6d965f24ccf9d39f1b9a"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.11.0/cww-app-v0.11.0-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "7f1b82cdf2b0485b388943bc5e55e386d919dfaa4895da6e562e7e04ab40b494"
     end
   end
 

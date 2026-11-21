@@ -1,15 +1,15 @@
 class Cww < Formula
   desc "Chat with Work Desktop app, terminal interface and background agent"
   homepage "https://github.com/crmne/chatwithwork-desktop"
-  version "0.19.0"
+  version "0.20.0"
   license "GPL-3.0-only"
 
   on_macos do
     # The bundled Node runtime needs macOS 13.5 (Homebrew names only Ventura).
     depends_on macos: :ventura
     # Universal CLI and app bundle, signed with Developer ID and notarized.
-    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.19.0/cww-v0.19.0-macos-universal.tar.gz"
-    sha256 "0eb014342dc7768c0f50d60226d590d3656b38c1e1d145f949a754cc7211d728"
+    url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.20.0/Chat-with-Work-Desktop-0.20.0-macOS-universal.tar.gz"
+    sha256 "9793d46479d22a75b9f8701d964fe110757a241dd35afc7e7f5448002545e501"
   end
 
   on_linux do
@@ -19,12 +19,12 @@ class Cww < Formula
     # The window is a WebKitGTK 4.1 web view, which Homebrew doesn't carry:
     # the app uses the distribution's (see caveats).
     on_intel do
-      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.19.0/cww-app-v0.19.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e44aa5301e84a320c0c39a5454695f6ed30adda181c81473c0b3213adf95a912"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.20.0/Chat-with-Work-Desktop-0.20.0-Linux-x86_64.tar.gz"
+      sha256 "a6c187fb6725685569ae37ee1aed7c698f870017247eebe4109c430e522f3917"
     end
     on_arm do
-      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.19.0/cww-app-v0.19.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0bb6461929c1f038e8028bc1f802ffa04e6ee8437e5782bdf0334112898122b7"
+      url "https://github.com/crmne/chatwithwork-desktop/releases/download/v0.20.0/Chat-with-Work-Desktop-0.20.0-Linux-aarch64.tar.gz"
+      sha256 "e29af083ecb74b336a6f990641c6101d1bd6b0f721014c28418f59a32ac57c59"
     end
   end
 
